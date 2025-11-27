@@ -26,7 +26,7 @@ function CopyCodeBlock({ code }) {
         disabled={copied}
         className={`ml-4 p-2 rounded-md transition-all duration-200 border border-gray-600 ${
           copied
-            ? "bg-green-900/30 text-green-400 border-green-500/50"
+            ? "bg-green-500/30 text-green-400 border-green-500/50"
             : "bg-gray-700 hover:bg-gray-600 hover:text-white"
         }`}
       >

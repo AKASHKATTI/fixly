@@ -16,6 +16,7 @@ function CodeReviewDisplay({ reviewData }) {
     <div className="space-y-8 text-white">
       
       {/* SECTION 1: ORIGINAL CODE */}
+
       <div>
         <h4 className="text-lg font-bold text-[#6EE7FF] mb-2">
           Original Code
@@ -27,15 +28,16 @@ function CodeReviewDisplay({ reviewData }) {
       </div>
 
       {/* SECTION 2: MISTAKES */}
+
       <div>
-        <h4 className="text-lg font-bold text-red-400 mb-2">
+        <h4 className="text-lg font-bold text-white mb-2">
           Mistakes Found
         </h4>
 
         {mistakes && mistakes.length > 0 ? (
           <ul className="list-disc list-inside space-y-1">
             {mistakes.map((m, idx) => (
-              <li key={idx} className="text-red-300">
+              <li key={idx} className="text-white">
                 <span className="font-semibold text-red-400">
                   {m.line !== null ? `Line ${m.line}: ` : ""}
                 </span>
@@ -50,12 +52,12 @@ function CodeReviewDisplay({ reviewData }) {
 
       {/* SECTION 3: IMPROVEMENTS */}
       <div>
-        <h4 className="text-lg font-bold text-blue-300 mb-2">Suggestions</h4>
+        <h4 className="text-lg font-bold text-white mb-2">Suggestions</h4>
 
         {improvements && improvements.length > 0 ? (
           <ul className="list-disc list-inside space-y-1">
             {improvements.map((imp, idx) => (
-              <li key={idx} className="text-blue-200">
+              <li key={idx} className="text-white">
                 <span className="font-semibold text-blue-300">
                   {imp.line !== null ? `Line ${imp.line}: ` : ""}
                 </span>
