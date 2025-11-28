@@ -58,6 +58,10 @@ function Temp() {
             {loading ? "Analyzing..." : "Review Code"}
           </button>
         </div>
+
+        <footer>
+          <p className ='text-center text-white-500  '>  @KATTI AKASH <span>All rights reserved</span></p> 
+        </footer>
       </div>
 
       <div className="bg-white w-3/4 m-5 p-5 rounded-lg shadow-lg overflow-auto max-h-[500px]">

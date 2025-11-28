@@ -18,7 +18,7 @@ function CodeReviewDisplay({ reviewData }) {
       {/* SECTION 1: ORIGINAL CODE */}
 
       <div>
-        <h4 className="text-lg font-bold text-[#6EE7FF] mb-2">
+        <h4 className="text-lg font-bold  mb-2">
           Original Code
         </h4>
         <CopyCodeBlock 

@@ -54,7 +54,7 @@ function HoamePage() {
 
             <div className="inline-flex items-center gap-3 text-sm font-semibold bg-black px-3 py-1 rounded-full border border-white/50 text-[#D1D5DB]">
               <LuSparkles className="w-5 h-5 text-[#D1D5DB]" />
-              AI Powered Review Tool
+              AI Powered Code Fixer
             </div>
 
 
@@ -98,6 +98,10 @@ function HoamePage() {
             </div>
 
             {errorMsg && <p className="text-red-500 mt-3">{errorMsg}</p>}
+          </div>
+
+          <div className="mt-20 text-center">
+            <p className="text-gray-700 pt-10"> 2025 @AKASH KATTI <span>All rights reserved</span> </p>
           </div>
         </section>
 
