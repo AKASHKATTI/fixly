@@ -1,4 +1,4 @@
-// Backend/src/services/ai.service.js
+
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 let model;
@@ -124,7 +124,7 @@ async function generateContent(prompt) {
     const response = result.response;
     let text = "";
 
-    // Handle different SDK response structures
+    
     if (typeof response.text === "function") {
       text = response.text();
     } else if (typeof response.text === "string") {
@@ -133,8 +133,7 @@ async function generateContent(prompt) {
       text = response.candidates[0].content.parts.map(p => p.text).join("");
     }
 
-    // 2. CLEANUP: Sometimes models still wrap JSON in markdown (e.g., ```json ... ```)
-    // This regex removes those code fences to ensure valid JSON parsing.
+    
     const cleanText = text.replace(/```json|```/g, "").trim();
 
     return cleanText;

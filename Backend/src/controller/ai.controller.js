@@ -1,4 +1,4 @@
-// Backend/src/controller/ai.controller.js
+
 const aiService = require('../services/ai.service');
 
 module.exports.getReview = async (req, res, next) => {
@@ -8,7 +8,7 @@ module.exports.getReview = async (req, res, next) => {
       (req.body && (req.body.prompt || req.body.code)) ||
       (req.query && (req.query.prompt || req.query.code));
 
-    console.log('Received prompt:', code);
+    // console.log('Received prompt:', code);
 
     if (!code) {
       return res.status(400).json({ error: 'Prompt or code is required' });
@@ -19,8 +19,7 @@ module.exports.getReview = async (req, res, next) => {
     }
 
     const response = await aiService(code);
-    // return res.json({ success: true, data: response });
-    // res.send(response);
+    
     const reviewData = JSON.parse(response);
     res.json(reviewData);
 
